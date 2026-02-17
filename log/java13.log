@@ -1,0 +1,43 @@
+2026.02.16 23:31:13,806	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [skillId]	fileName: blessoption->RoseVain
+2026.02.16 23:31:13,845	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [skillLevel]	fileName: blessoption->RoseVain
+2026.02.16 23:31:13,846	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [enchant_level]	fileName: blessoption->RoseVain
+2026.02.16 23:31:13,847	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [enchant_level]	fileName: blessoption->RoseVain
+2026.02.16 23:31:13,892	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemId]	fileName: combinationitemdata->SamuraiCrow
+2026.02.16 23:31:13,893	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemEnchant]	fileName: combinationitemdata->SamuraiCrow
+2026.02.16 23:31:13,894	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemId]	fileName: combinationitemdata->SamuraiCrow
+2026.02.16 23:31:13,895	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemEnchant]	fileName: combinationitemdata->SamuraiCrow
+2026.02.16 23:31:13,895	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemId]	fileName: combinationitemdata->SamuraiCrow
+2026.02.16 23:31:13,896	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemEnchant]	fileName: combinationitemdata->SamuraiCrow
+2026.02.16 23:31:13,896	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemId]	fileName: combinationitemdata->SamuraiCrow
+2026.02.16 23:31:13,897	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemEnchant]	fileName: combinationitemdata->SamuraiCrow
+2026.02.16 23:31:13,898	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemCount]	fileName: combinationitemdata->SamuraiCrow
+2026.02.16 23:31:13,898	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [chance]	fileName: combinationitemdata->SamuraiCrow
+2026.02.16 23:31:14,010	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [group_count]	fileName: herobook->SamuraiCrow
+2026.02.16 23:31:14,143	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [cost_item]	fileName: relicsplaydata->SamuraiCrow
+2026.02.16 23:31:16,335	INFO	30	org.l2explorer.L2ExplorerDat	Update available: 2025.10.25
+2026.02.16 23:31:29,094	INFO	30	org.l2explorer.L2ExplorerDat	---------------------------------------
+2026.02.16 23:31:29,095	INFO	30	org.l2explorer.L2ExplorerDat	Abrindo arquivo: PurchaseLimitCraft-eu.dat
+2026.02.16 23:31:29,100	INFO	57	org.l2explorer.L2ExplorerDat	File PurchaseLimitCraft-eu.dat encrypted. Lineage2Ver413 decrypt ...
+2026.02.16 23:31:29,118	INFO	57	org.l2explorer.L2ExplorerDat	Decrypt PurchaseLimitCraft-eu.dat file successfully by v413_encdec decrypter.
+2026.02.16 23:31:29,119	INFO	57	org.l2explorer.L2ExplorerDat	Read the file structure ...
+2026.02.16 23:31:29,182	INFO	57	org.l2explorer.L2ExplorerDat	Completed.
+2026.02.16 23:31:42,588	INFO	30	org.l2explorer.L2ExplorerDat	---------------------------------------
+2026.02.16 23:31:42,589	INFO	30	org.l2explorer.L2ExplorerDat	Abrindo arquivo: PurchaseLimitCraft_ClassicAden-eu.dat
+2026.02.16 23:31:42,647	INFO	57	org.l2explorer.L2ExplorerDat	File PurchaseLimitCraft_ClassicAden-eu.dat encrypted. Lineage2Ver413 decrypt ...
+2026.02.16 23:31:42,670	INFO	57	org.l2explorer.L2ExplorerDat	Decrypt PurchaseLimitCraft_ClassicAden-eu.dat file successfully by v413_encdec decrypter.
+2026.02.16 23:31:42,670	INFO	57	org.l2explorer.L2ExplorerDat	Read the file structure ...
+2026.02.16 23:31:42,712	INFO	57	org.l2explorer.L2ExplorerDat	Completed.
+2026.02.16 23:31:48,781	INFO	30	org.l2explorer.L2ExplorerDat	---------------------------------------
+2026.02.16 23:31:48,782	INFO	30	org.l2explorer.L2ExplorerDat	Abrindo arquivo: PurchaseLimitCraft_Classic-eu.dat
+2026.02.16 23:31:48,788	INFO	57	org.l2explorer.L2ExplorerDat	File PurchaseLimitCraft_Classic-eu.dat encrypted. Lineage2Ver413 decrypt ...
+2026.02.16 23:31:48,796	INFO	57	org.l2explorer.L2ExplorerDat	Decrypt PurchaseLimitCraft_Classic-eu.dat file successfully by v413_encdec decrypter.
+2026.02.16 23:31:48,796	INFO	57	org.l2explorer.L2ExplorerDat	Read the file structure ...
+2026.02.16 23:31:48,846	INFO	57	org.l2explorer.L2ExplorerDat	Completed.
+2026.02.16 23:32:13,051	INFO	30	org.l2explorer.L2ExplorerDat	---------------------------------------
+2026.02.16 23:32:13,108	INFO	30	org.l2explorer.L2ExplorerDat	Abrindo arquivo: PurchaseLimitCraft-eu.dat
+2026.02.16 23:32:13,109	INFO	57	org.l2explorer.L2ExplorerDat	File PurchaseLimitCraft-eu.dat encrypted. Lineage2Ver413 decrypt ...
+2026.02.16 23:32:13,114	INFO	57	org.l2explorer.L2ExplorerDat	Decrypt PurchaseLimitCraft-eu.dat file successfully by v413_encdec decrypter.
+2026.02.16 23:32:13,115	INFO	57	org.l2explorer.L2ExplorerDat	Read the file structure ...
+2026.02.16 23:32:13,144	INFO	57	org.l2explorer.L2ExplorerDat	Completed.
+2026.02.16 23:33:02,418	INFO	57	org.l2explorer.L2ExplorerDat	---------------------------------------
+2026.02.16 23:33:02,418	INFO	57	org.l2explorer.L2ExplorerDat	Saved: /home/luiz/git/L2SuperApp/databases/purchaselimitcraft_main.dat.txt

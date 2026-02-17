@@ -1,0 +1,43 @@
+2026.02.17 03:09:07,757	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [skillId]	fileName: blessoption->RoseVain
+2026.02.17 03:09:07,815	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [skillLevel]	fileName: blessoption->RoseVain
+2026.02.17 03:09:07,816	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [enchant_level]	fileName: blessoption->RoseVain
+2026.02.17 03:09:07,817	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [enchant_level]	fileName: blessoption->RoseVain
+2026.02.17 03:09:07,873	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemId]	fileName: combinationitemdata->SamuraiCrow
+2026.02.17 03:09:07,873	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemEnchant]	fileName: combinationitemdata->SamuraiCrow
+2026.02.17 03:09:07,875	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemId]	fileName: combinationitemdata->SamuraiCrow
+2026.02.17 03:09:07,876	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemEnchant]	fileName: combinationitemdata->SamuraiCrow
+2026.02.17 03:09:07,877	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemId]	fileName: combinationitemdata->SamuraiCrow
+2026.02.17 03:09:07,878	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemEnchant]	fileName: combinationitemdata->SamuraiCrow
+2026.02.17 03:09:07,882	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemId]	fileName: combinationitemdata->SamuraiCrow
+2026.02.17 03:09:07,882	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemEnchant]	fileName: combinationitemdata->SamuraiCrow
+2026.02.17 03:09:07,883	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemCount]	fileName: combinationitemdata->SamuraiCrow
+2026.02.17 03:09:07,884	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [chance]	fileName: combinationitemdata->SamuraiCrow
+2026.02.17 03:09:08,037	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [group_count]	fileName: herobook->SamuraiCrow
+2026.02.17 03:09:08,236	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [cost_item]	fileName: relicsplaydata->SamuraiCrow
+2026.02.17 03:09:10,393	INFO	30	org.l2explorer.L2ExplorerDat	Update available: 2025.10.25
+2026.02.17 03:09:14,263	INFO	30	org.l2explorer.L2ExplorerDat	---------------------------------------
+2026.02.17 03:09:14,264	INFO	30	org.l2explorer.L2ExplorerDat	Abrindo arquivo: Server_Id_List.dat
+2026.02.17 03:09:14,266	INFO	57	org.l2explorer.L2ExplorerDat	File Server_Id_List.dat encrypted. Lineage2Ver413 decrypt ...
+2026.02.17 03:09:14,273	INFO	57	org.l2explorer.L2ExplorerDat	Decrypt Server_Id_List.dat file successfully by v413_encdec decrypter.
+2026.02.17 03:09:14,274	INFO	57	org.l2explorer.L2ExplorerDat	Read the file structure ...
+2026.02.17 03:09:14,310	INFO	57	org.l2explorer.L2ExplorerDat	Completed.
+2026.02.17 03:09:35,986	INFO	30	org.l2explorer.L2ExplorerDat	---------------------------------------
+2026.02.17 03:09:35,987	INFO	30	org.l2explorer.L2ExplorerDat	Abrindo arquivo: Server_Id_List_Classic.dat
+2026.02.17 03:09:36,032	INFO	57	org.l2explorer.L2ExplorerDat	File Server_Id_List_Classic.dat encrypted. Lineage2Ver413 decrypt ...
+2026.02.17 03:09:36,037	INFO	57	org.l2explorer.L2ExplorerDat	Decrypt Server_Id_List_Classic.dat file successfully by v413_encdec decrypter.
+2026.02.17 03:09:36,037	INFO	57	org.l2explorer.L2ExplorerDat	Read the file structure ...
+2026.02.17 03:09:36,061	INFO	57	org.l2explorer.L2ExplorerDat	Completed.
+2026.02.17 03:09:44,719	INFO	30	org.l2explorer.L2ExplorerDat	---------------------------------------
+2026.02.17 03:09:44,721	INFO	30	org.l2explorer.L2ExplorerDat	Abrindo arquivo: Server_Id_List_ClassicAden.dat
+2026.02.17 03:09:44,722	INFO	57	org.l2explorer.L2ExplorerDat	File Server_Id_List_ClassicAden.dat encrypted. Lineage2Ver413 decrypt ...
+2026.02.17 03:09:44,730	INFO	57	org.l2explorer.L2ExplorerDat	Decrypt Server_Id_List_ClassicAden.dat file successfully by v413_encdec decrypter.
+2026.02.17 03:09:44,730	INFO	57	org.l2explorer.L2ExplorerDat	Read the file structure ...
+2026.02.17 03:09:44,766	INFO	57	org.l2explorer.L2ExplorerDat	Completed.
+2026.02.17 03:09:55,953	INFO	30	org.l2explorer.L2ExplorerDat	---------------------------------------
+2026.02.17 03:09:55,953	INFO	30	org.l2explorer.L2ExplorerDat	Abrindo arquivo: ServerName-eu.dat
+2026.02.17 03:09:55,955	INFO	57	org.l2explorer.L2ExplorerDat	File ServerName-eu.dat encrypted. Lineage2Ver413 decrypt ...
+2026.02.17 03:09:56,016	INFO	57	org.l2explorer.L2ExplorerDat	Decrypt ServerName-eu.dat file successfully by v413_encdec decrypter.
+2026.02.17 03:09:56,016	INFO	57	org.l2explorer.L2ExplorerDat	Read the file structure ...
+2026.02.17 03:09:56,020	INFO	57	org.l2explorer.L2ExplorerDat	Unpacking [L2GameDataName.dat]
+2026.02.17 03:09:56,537	INFO	57	org.l2explorer.L2ExplorerDat	GameDataName: Load 144727 count.
+2026.02.17 03:09:56,584	INFO	57	org.l2explorer.L2ExplorerDat	Completed.

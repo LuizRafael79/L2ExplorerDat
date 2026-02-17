@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<file pattern="RoseVain" isSafePackage="true">
+		<node name="CharacterStyle" reader="UINT"/>
+		<for name="CharacterStyle" hidden="false">
+			<node name="StyleID" reader="USHORT"/>
+			<node name="Category" reader="UBYTE"/>
+			<node name="MarkType" reader="UBYTE"/>
+			<node name="UiGrade" reader="UBYTE"/>
+			<node name="StyleName" reader="ASCF"/>
+			<node name="ActiveCosts" reader="UBYTE"/>
+			<for name="ActiveCosts">
+				<node name="ItemClassID" reader="UINT"/>
+				<node name="ItemAmount" reader="UINT"/>
+			</for>
+			<node name="ShiftWeaponID" reader="UINT"/>
+			<node name="SkillID" reader="UINT"/>
+			<node name="Enchants" reader="UBYTE"/>
+			<for name="Enchants">
+				<node name="Level" reader="UBYTE"/>
+			</for>
+			<node name="KillEffect" reader="MAP_INT"/>
+			<node name="ChatBgTex" reader="MAP_INT"/>
+		</for>
+	</file>
+	<file pattern="SamuraiCrow" isSafePackage="true">
+		<node name="data" reader="UINT" />
+		<for name="character_style" size="#data" hidden="false">
+			<node name="StyleID" reader="USHORT" />
+			<node name="Category" reader="UBYTE" />
+			<node name="MarkType" reader="UBYTE" />
+			<node name="StyleName" reader="ASCF" />
+			<node name="ActiveCost" reader="CNTR" />
+			<for name="ActiveCost" size="#ActiveCost" hidden="true">
+				<node name="act_id" reader="UINT" />
+				<node name="act_count" reader="UINT" />
+			</for>
+			<wrapper name="DeactiveCost">
+				<node name="deac_id" reader="UINT" />
+				<node name="deac_count" reader="UINT" />
+			</wrapper>
+			<node name="ShiftWeaponID" reader="UINT" />
+			<node name="SkillID" reader="UINT" />
+			<node name="Enchants" reader="CNTR" />
+			<for name="Enchants" size="#Enchants" hidden="true">
+				<node name="Enchant" reader="UBYTE" />
+			</for>
+			<node name="KillEffect" reader="MAP_INT" />
+			<node name="ChatBgTex" reader="MAP_INT" />
+			<node name="ActivatableInfo" reader="CNTR" />
+			<for name="ActivatableInfo" size="#ActivatableInfo" hidden="true">
+				<node name="Race" reader="UBYTE" enum_name="race" />
+				<node name="gender" reader="UBYTE" enum_name="sex" />
+				<node name="OriginClassID" reader="UINT" enum_name="class" />
+			</for>
+		</for>
+	</file>
+</list>
+
+
+  

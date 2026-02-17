@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.l2jmobius</groupId>
+    <artifactId>L2ExplorerDat</artifactId>
+    <version>1.0.0</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>25</maven.compiler.release>
+        <main.class>org.l2explorer.L2ExplorerDat</main.class>
+        <flatlaf.version>3.5.1</flatlaf.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.formdev</groupId>
+            <artifactId>flatlaf</artifactId>
+            <version>3.5.4</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+        </resources>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <configuration>
+                    <release>${maven.compiler.release}</release>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.4.1</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>./</classpathPrefix>
+                            <mainClass>${main.class}</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.7.0</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/libs</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <delete dir="${project.basedir}/build" />
+                                <mkdir dir="${project.basedir}/build/libs" />
+                                <copy file="${project.build.directory}/${project.build.finalName}.jar"
+                                      todir="${project.basedir}/build/libs" />
+                                <copy todir="${project.basedir}/build/libs">
+                                    <fileset dir="${project.build.directory}/libs" />
+                                </copy>
+                                <copy todir="${project.basedir}/build" failonerror="false">
+                                    <fileset dir="${project.basedir}/scripts">
+                                        <include name="*" />
+                                    </fileset>
+                                </copy>
+                                <copy todir="${project.basedir}/build/config" failonerror="false"><fileset dir="${project.basedir}/config" erroronmissingdir="false" /></copy>
+                                <copy todir="${project.basedir}/build/data" failonerror="false"><fileset dir="${project.basedir}/data" erroronmissingdir="false" /></copy>
+                                <copy todir="${project.basedir}/build/images" failonerror="false"><fileset dir="${project.basedir}/images" erroronmissingdir="false" /></copy>
+
+                                <chmod dir="${project.basedir}/build" perm="755" includes="*.sh"/>
+
+                                <zip destfile="${project.build.directory}/${project.artifactId}_Deploy.zip" basedir="${project.basedir}/build" />
+
+                                <copy file="${project.build.directory}/${project.artifactId}_Deploy.zip" todir="${project.basedir}/build" />
+                                <echo message="✅ Missão Cumprida! Build Swing finalizado em: build/" />
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

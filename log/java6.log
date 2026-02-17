@@ -1,0 +1,25 @@
+2026.02.17 02:36:00,577	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [skillId]	fileName: blessoption->RoseVain
+2026.02.17 02:36:00,612	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [skillLevel]	fileName: blessoption->RoseVain
+2026.02.17 02:36:00,612	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [enchant_level]	fileName: blessoption->RoseVain
+2026.02.17 02:36:00,613	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [enchant_level]	fileName: blessoption->RoseVain
+2026.02.17 02:36:00,653	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemId]	fileName: combinationitemdata->SamuraiCrow
+2026.02.17 02:36:00,654	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemEnchant]	fileName: combinationitemdata->SamuraiCrow
+2026.02.17 02:36:00,654	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemId]	fileName: combinationitemdata->SamuraiCrow
+2026.02.17 02:36:00,655	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemEnchant]	fileName: combinationitemdata->SamuraiCrow
+2026.02.17 02:36:00,655	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemId]	fileName: combinationitemdata->SamuraiCrow
+2026.02.17 02:36:00,656	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemEnchant]	fileName: combinationitemdata->SamuraiCrow
+2026.02.17 02:36:00,657	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemId]	fileName: combinationitemdata->SamuraiCrow
+2026.02.17 02:36:00,657	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemEnchant]	fileName: combinationitemdata->SamuraiCrow
+2026.02.17 02:36:00,658	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [itemCount]	fileName: combinationitemdata->SamuraiCrow
+2026.02.17 02:36:00,658	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [chance]	fileName: combinationitemdata->SamuraiCrow
+2026.02.17 02:36:00,729	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [group_count]	fileName: herobook->SamuraiCrow
+2026.02.17 02:36:00,819	WARNING	40	org.l2explorer.xml.DescriptorParser	Node name duplicated [cost_item]	fileName: relicsplaydata->SamuraiCrow
+2026.02.17 02:36:02,065	INFO	30	org.l2explorer.L2ExplorerDat	Update available: 2025.10.25
+2026.02.17 02:36:06,894	INFO	30	org.l2explorer.L2ExplorerDat	---------------------------------------
+2026.02.17 02:36:06,895	INFO	30	org.l2explorer.L2ExplorerDat	Abrindo arquivo: ServerName-eu.dat
+2026.02.17 02:36:06,936	INFO	57	org.l2explorer.L2ExplorerDat	File ServerName-eu.dat encrypted. Lineage2Ver413 decrypt ...
+2026.02.17 02:36:06,950	INFO	57	org.l2explorer.L2ExplorerDat	Decrypt ServerName-eu.dat file successfully by v413_encdec decrypter.
+2026.02.17 02:36:06,951	INFO	57	org.l2explorer.L2ExplorerDat	Read the file structure ...
+2026.02.17 02:36:06,963	INFO	57	org.l2explorer.L2ExplorerDat	Unpacking [L2GameDataName.dat]
+2026.02.17 02:36:07,781	INFO	57	org.l2explorer.L2ExplorerDat	GameDataName: Load 144727 count.
+2026.02.17 02:36:07,839	INFO	57	org.l2explorer.L2ExplorerDat	Completed.

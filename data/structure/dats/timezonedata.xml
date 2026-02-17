@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<file pattern="PreludeOfWar2" isSafePackage="true">
+		<node name="data" reader="UINT" />
+		<for name="field_info" size="#data" hidden="false">
+			<node name="field_id" reader="UINT" />
+			<node name="name" reader="ASCF" />
+			<node name="desc" reader="ASCF" />
+			<node name="refill_item_list" reader="UCHAR" />
+			<for name="refill_item_list" size="#refill_item_list">
+				<node name="itemId" reader="UINT" />
+			</for>
+		</for>
+	</file>
+	<file pattern="PreludeOfWar3" isSafePackage="true">
+		<node name="data" reader="UINT" />
+		<for name="field_info" size="#data" hidden="false">
+			<node name="type" reader="ASCF" />
+			<node name="field_id" reader="UINT" />
+			<node name="name" reader="ASCF" />
+			<node name="desc" reader="ASCF" />
+			<node name="refill_item_list" reader="UCHAR" />
+			<for name="refill_item_list" size="#refill_item_list">
+				<node name="itemId" reader="UINT" />
+			</for>
+		</for>
+	</file>
+	<file pattern="MasterClass2" isSafePackage="true">
+		<node name="data" reader="UINT" />
+		<for name="field_info" size="#data" hidden="false">
+			<node name="type" reader="ASCF" />
+			<node name="field_id" reader="UINT" />
+			<node name="name" reader="ASCF" />
+			<node name="desc" reader="ASCF" />
+			<node name="refill_item_list" reader="UCHAR" />
+			<for name="refill_item_list" size="#refill_item_list">
+				<node name="itemId" reader="UINT" />
+			</for>
+			<node name="aCategory" reader="UINT" />
+			<node name="aPvpType" reader="ASCF" />
+			<node name="aFieldImage" reader="ASCF" />
+		</for>
+	</file>
+	<file pattern="MasterClass3" isSafePackage="true">
+		<node name="data" reader="UINT" />
+		<for name="field_info" size="#data" hidden="false">
+			<node name="type" reader="UCHAR" />
+			<node name="field_id" reader="UINT" />
+			<node name="name" reader="ASCF" />
+			<node name="desc" reader="ASCF" hidden="true" />
+			<node name="refill_item_list_count" reader="CNTR" />
+			<for name="refill_item_list" size="#refill_item_list_count" hidden="true">
+				<node name="itemId" reader="UINT" />
+			</for>
+			<node name="fieldImage" reader="MAP_INT" />
+			<node name="isWorld" reader="UBYTE" />
+			<node name="isPvp" reader="UBYTE" />
+			<node name="isEvent" reader="UBYTE" />
+			<node name="fieldInfo" reader="ASCF" />
+		</for>
+		<node name="types" reader="UBYTE" />
+		<for name="types" size="#types" hidden="false">
+			<node name="zone_type" reader="ASCF" />
+		</for>
+	</file>
+	<file pattern="PathOfRogue" isSafePackage="true">
+		<node name="data" reader="UINT" />
+		<for name="field_info" size="#data" hidden="false">
+			<node name="type" reader="UCHAR" />
+			<node name="field_id" reader="UINT" />
+			<node name="name" reader="ASCF" />
+			<node name="desc" reader="ASCF" hidden="true" />
+			<node name="refill_item_list_count" reader="CNTR" />
+			<for name="refill_item_list" size="#refill_item_list_count" hidden="true">
+				<node name="itemId" reader="UINT" />
+			</for>
+			<node name="fieldImage" reader="MAP_INT" />
+			<node name="isWorld" reader="UBYTE" />
+			<node name="isPvp" reader="UBYTE" />
+			<node name="isEvent" reader="UBYTE" />
+			<node name="fieldInfo" reader="ASCF" />
+			<node name="is_account_share" reader="UBYTE" />
+		</for>
+		<node name="types" reader="UBYTE" />
+		<for name="types" size="#types" hidden="false">
+			<node name="zone_type" reader="ASCF" />
+		</for>
+	</file>
+	<file pattern="SamuraiCrow_OLD" isSafePackage="true">
+		<node name="data" reader="UINT" />
+		<for name="field_info" size="#data" hidden="false">
+			<node name="type" reader="UCHAR" enumName="timedzone_type" />
+			<node name="field_id" reader="UINT" />
+			<node name="name" reader="ASCF" />
+			<node name="desc" reader="ASCF" />
+			<node name="refill_item_list_count" reader="CNTR" />
+			<for name="refill_item_list" size="#refill_item_list_count" hidden="true">
+				<node name="itemId" reader="UINT" />
+			</for>
+			<node name="fieldImage" reader="MAP_INT" />
+			<node name="isWorld" reader="UBYTE" />
+			<node name="isPvp" reader="UBYTE" />
+			<node name="isEvent" reader="UBYTE" />
+			<node name="fieldInfo" reader="ASCF" />
+			<node name="is_account_share" reader="UBYTE" />
+				<node name="register_type" reader="UBYTE" />
+			<if name="switch" param="#register_type" val="127">
+			<!-- event_type and team_matching fields is the same thing
+			only changed names to parse don't complain -->
+				<node name="event_type" reader="UBYTE" /> <!-- 1 = Team Matching -->
+				<node name="request_hour" reader="UCHAR" />
+				<node name="request_min" reader="UCHAR" />
+				<node name="start_hour" reader="UCHAR" />	
+				<node name="start_min" reader="UCHAR" />
+			</if>
+			<else>
+				<node name="team_matching" reader="UBYTE" /> <!-- 0 = normal timedzone -->
+			</else>			
+		</for>
+		<node name="types" reader="UBYTE" />
+		<for name="types" size="#types" hidden="false">
+			<node name="zone_type" reader="ASCF" />
+		</for>
+	</file>
+	<file pattern="SamuraiCrow" isSafePackage="true">
+		<node name="field_info" reader="UINT" />
+		<for name="field_info" hidden="false">
+			<node name="field_type" reader="UBYTE" />
+			<node name="FieldId" reader="UINT" />
+			<node name="FieldName" reader="ASCF" />
+			<node name="Desc" reader="ASCF" />
+			<node name="RefillItemList" reader="CNTR" />
+			<for name="RefillItemList" hidden="true">
+				<node name="ItemClassId" reader="UINT" />
+			</for>
+			<node name="FieldImage" reader="MAP_INT" />
+			<node name="Category" reader="UBYTE" />
+			<node name="PvpType" reader="UCHAR" />
+			<node name="IsEvent" reader="UBYTE" />
+			<node name="TimeInfo" reader="ASCF" />
+			<node name="IsAccountShare" reader="UBYTE" />
+			<node name="available_day" reader="UCHAR" />
+			<node name="matching_inzone_active_time" reader="UBYTE" />
+			<for name="matching_inzone_active_time">
+				<wrapper name="StartTime">
+					<node name="Start_Hour" reader="UBYTE" />
+					<node name="Start_Minute" reader="UBYTE" />
+				</wrapper>
+				<wrapper name="EndTime">
+					<node name="End_Hour" reader="UBYTE" />
+					<node name="End_Minute" reader="UBYTE" />
+				</wrapper>
+			</for>
+		</for>
+		<node name="TypeList" reader="UBYTE"/>
+		<for name="TypeList" hidden="false">
+			<node name="Type" reader="ASCF"/>
+		</for>
+	</file>
+</list>

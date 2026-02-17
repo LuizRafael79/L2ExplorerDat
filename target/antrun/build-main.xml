@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-antrun-" default="main">
+  <target name="main">
+    <delete dir="/home/luiz/git/L2ClientDat/build" />
+    <mkdir dir="/home/luiz/git/L2ClientDat/build/libs" />
+    <copy file="/home/luiz/git/L2ClientDat/target/L2ExplorerDat.jar" todir="/home/luiz/git/L2ClientDat/build/libs" />
+    <copy todir="/home/luiz/git/L2ClientDat/build/libs">
+      <fileset dir="/home/luiz/git/L2ClientDat/target/libs" />
+    </copy>
+    <copy todir="/home/luiz/git/L2ClientDat/build" failonerror="false">
+      <fileset dir="/home/luiz/git/L2ClientDat/scripts">
+        <include name="*" />
+      </fileset>
+    </copy>
+    <copy todir="/home/luiz/git/L2ClientDat/build/config" failonerror="false">
+      <fileset dir="/home/luiz/git/L2ClientDat/config" erroronmissingdir="false" />
+    </copy>
+    <copy todir="/home/luiz/git/L2ClientDat/build/data" failonerror="false">
+      <fileset dir="/home/luiz/git/L2ClientDat/data" erroronmissingdir="false" />
+    </copy>
+    <copy todir="/home/luiz/git/L2ClientDat/build/images" failonerror="false">
+      <fileset dir="/home/luiz/git/L2ClientDat/images" erroronmissingdir="false" />
+    </copy>
+    <chmod perm="755" includes="*.sh" dir="/home/luiz/git/L2ClientDat/build" />
+    <zip basedir="/home/luiz/git/L2ClientDat/build" destfile="/home/luiz/git/L2ClientDat/target/L2ExplorerDat_Deploy.zip" />
+    <copy file="/home/luiz/git/L2ClientDat/target/L2ExplorerDat_Deploy.zip" todir="/home/luiz/git/L2ClientDat/build" />
+    <echo message="✅ Missão Cumprida! Build Swing finalizado em: build/" />
+  </target>
+</project>

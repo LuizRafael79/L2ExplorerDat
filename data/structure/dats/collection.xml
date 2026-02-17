@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<file pattern="ReturnOfTheQueenAnt" isSafePackage="true">
+		<node name="data" reader="UINT" />
+		<for name="collection" size="#data" hidden="false">
+			<node name="collection_ID" reader="UINT" />
+			<node name="collection_name" reader="ASCF" />
+			<node name="main_category" reader="UINT" />
+			<node name="period" reader="UINT" />
+			<node name="option_id" reader="UINT" />
+			<node name="description" reader="CNTR" />
+			<for name="description" size="#description">
+				<node name="desc_name" reader="ASCF" />
+				<node name="unk_4" reader="UINT" />
+				<node name="desc_param=" reader="FLOAT" />
+			</for>
+			<node name="slots" reader="CNTR" />
+			<for name="items" size="#slots">
+				<node name="item_id" reader="UINT" />
+				<node name="item_id2" reader="UINT" />
+				<node name="item_count" reader="UINT" />
+				<node name="enchant" reader="USHORT" />
+				<node name="slot" reader="UCHAR" />
+				<node name="bless" reader="UCHAR" />
+				<node name="bless_cond" reader="UINT" />
+			</for>
+			<node name="unk3" reader="USHORT" />
+			<node name="complete_item_type" reader="CNTR" />
+			<for name="complete_item_type" size="#complete_item_type">
+				<node name="complete_item_type_0" reader="USHORT" />
+			</for>
+			<node name="complete_skill_type" reader="CNTR" />
+			<for name="complete_skill_type" size="#complete_skill_type">
+				<node name="complete_skill_type_0" reader="USHORT" />
+			</for>
+		</for>
+	</file>
+	<file pattern="MasterClass2" isSafePackage="true">
+		<node name="data" reader="UINT" />
+		<for name="collection" size="#data" hidden="false">
+			<node name="collection_ID" reader="UINT" />
+			<node name="collection_name" reader="ASCF" />
+			<node name="main_category" reader="UINT" />
+			<node name="period" reader="UINT" />
+			<node name="option_id" reader="UINT" />
+			<node name="description" reader="CNTR" />
+			<for name="description" size="#description">
+				<node name="desc_name" reader="ASCF" />
+				<node name="unk_4_diff_bool" reader="UINT" />
+				<node name="desc_param=" reader="FLOAT" />
+			</for>
+			<node name="slots" reader="CNTR" />
+			<for name="items" size="#slots">
+				<node name="item_id" reader="UINT" />
+				<node name="item_id2" reader="UINT" />
+				<node name="item_count" reader="UINT" />
+				<node name="enchant" reader="USHORT" />
+				<node name="slot" reader="UCHAR" />
+				<node name="bless" reader="UCHAR" />
+				<node name="bless_cond" reader="UINT" />
+			</for>
+			<node name="is_event" reader="UBYTE" />
+			<node name="unk5" reader="UBYTE" />
+			<if name="event_check" param="#is_event" val="1">
+				<node name="unk6" reader="UBYTE" />
+				<node name="unk7" reader="UBYTE" />
+				<node name="unk8" reader="UBYTE" />
+				<node name="unk9" reader="UBYTE" />
+				<node name="unk10" reader="UBYTE" />
+				<node name="unk11" reader="UBYTE" />
+			</if>
+			<node name="complete_item_type" reader="CNTR" />
+			<for name="complete_item_type" size="#complete_item_type">
+				<node name="complete_item_type_0" reader="USHORT" />
+			</for>
+			<node name="complete_skill_type" reader="CNTR" />
+			<for name="complete_skill_type" size="#complete_skill_type">
+				<node name="complete_skill_type_0" reader="USHORT" />
+			</for>
+			<if name="event_check" param="#is_event" val="1">
+				<node name="start_time" reader="ASCF" />
+				<node name="end_time" reader="ASCF" />
+			</if>
+		</for>
+	</file>
+	<file pattern="PathOfRogue" isSafePackage="true">
+		<node name="unk_size" reader="UINT" />
+		<for name="Unk" size="#unk_size" hidden="false">
+			<node name="Unk1" reader="UINT" />
+			<node name="Unk2" reader="UBYTE" />
+		</for>
+		<node name="data" reader="UINT" />
+		<for name="collection" size="#data" hidden="false">
+			<node name="collection_ID" reader="UINT" />
+			<node name="collection_name" reader="ASCF" />
+			<node name="main_category" reader="UINT" />
+			<node name="period" reader="UINT" />
+			<node name="option_id" reader="UINT" />
+			<node name="description" reader="CNTR" />
+			<for name="description" size="#description">
+				<node name="desc_name" reader="ASCF" />
+				<node name="unk_4_diff_bool" reader="UINT" />
+				<node name="desc_param=" reader="FLOAT" />
+			</for>
+			<node name="slots" reader="CNTR" />
+			<for name="items" size="#slots">
+				<node name="item_id" reader="UINT" />
+				<node name="item_id2" reader="UINT" />
+				<node name="item_count" reader="UINT" />
+				<node name="enchant" reader="USHORT" />
+				<node name="slot" reader="UCHAR" />
+				<node name="representative" reader="UINT" />
+				<node name="bless_cond" reader="UCHAR" />
+			</for>
+			<node name="RewardItems" reader="CNTR" />
+			<for name="RewardItems">
+				<node name="ItemID" reader="UINT" />
+				<node name="ItemCount" reader="UINT" />
+			</for>
+			<node name="RewardSkills" reader="CNTR" />
+			<for name="RewardSkills">
+				<node name="SkillID" reader="UINT" />
+				<node name="SkillLevel" reader="UINT" />
+			</for>
+			<wrapper name="date">
+				<node name="start" reader="ASCF" />
+				<node name="end" reader="ASCF" />
+			</wrapper>
+		</for>
+	</file>
+	<file pattern="Superion" isSafePackage="true">
+		<node name="unk_size" reader="UINT" />
+		<for name="Unk" size="#unk_size" hidden="false">
+			<node name="Unk1" reader="UINT" />
+			<node name="Unk2" reader="UINT" />
+		 </for>
+		<node name="data" reader="UINT" />
+		<for name="collection" size="#data" hidden="false">
+			<node name="collection_ID" reader="UINT" />
+			<node name="collection_name" reader="ASCF" />
+			<node name="main_category" reader="UINT" />
+			<node name="period" reader="UINT" />
+			<node name="option_id" reader="UINT" />
+			<node name="description" reader="CNTR" />
+			<for name="description" size="#description">
+				<node name="desc_name" reader="ASCF" />
+				<node name="Unk3" reader="UINT" />
+				<node name="desc_param" reader="FLOAT" />
+			</for>
+			<node name="slots" reader="CNTR" />
+			<for name="items" size="#slots">
+				<node name="item_id" reader="UINT" />
+				<node name="item_id2" reader="UINT" />
+				<node name="item_count" reader="UINT" />
+				<node name="enchant" reader="USHORT" />
+				<node name="slot" reader="UCHAR" />
+				<node name="representative" reader="UINT" />
+				<node name="bless_cond" reader="UCHAR" />
+			</for>
+			<node name="RewardItems" reader="CNTR" />
+			<for name="RewardItems">
+				<node name="ItemID" reader="UINT" />
+				<node name="ItemCount" reader="UINT" />
+			</for>
+			<node name="RewardSkills" reader="CNTR" />
+			<for name="RewardSkills">
+				<node name="SkillID" reader="UINT" />
+				<node name="SkillLevel" reader="UINT" />
+			</for>
+			<wrapper name="date">
+				<node name="start" reader="ASCF" />
+				<node name="end" reader="ASCF" />
+			</wrapper>
+			<node name="Unk4" reader="UCHAR" />
+		</for>
+	</file>
+    <file pattern="SamuraiCrow__1" isSafePackage="true">
+        <node name="data1" reader="UINT" />
+        <for name="collection_info" size="#data1" hidden="false">
+            <node name="collection_ID" reader="UINT" />
+            <node name="server_group_id" reader="UINT" />
+        </for>
+        <for name="unk_507_data" size="16" hidden="false">
+            <node name="unk0" reader="UINT" />
+        </for>
+        <node name="data2" reader="UINT" />
+        <for name="collection_server_group" size="#data2" hidden="false">
+            <node name="id" reader="UINT" />
+            <node name="unk1" reader="UINT" />
+            <node name="unk2" reader="UINT" />
+            <node name="unk3" reader="UINT" />
+            <node name="unk4" reader="UINT" />
+            <node name="unk5" reader="UINT" />
+            <node name="unk6" reader="UINT" />
+            <node name="unk7" reader="UINT" />
+            <node name="unk8" reader="UINT" />
+            <node name="unk9" reader="UINT" />
+            <node name="unk10" reader="UINT" />
+            <node name="unk11" reader="UINT" />
+            <node name="unk12" reader="UINT" />
+            <node name="unk13" reader="UINT" />
+            <node name="unk14" reader="UINT" />
+            <node name="unk15" reader="UINT" />
+            <node name="unk16" reader="UINT" />
+        </for>
+        <node name="data3" reader="UINT" />
+        <for name="collection" size="#data3" hidden="false">
+            <node name="collection_id" reader="UINT" />
+            <node name="collection_name" reader="ASCF" />
+            <node name="main_category" reader="UINT" />
+            <node name="period" reader="UINT" />
+            <node name="option_id" reader="UINT" />
+            <node name="description" reader="CNTR" />
+            <for name="description" size="#description">
+                <node name="desc_name" reader="ASCF" />
+                <node name="unk_1" reader="UINT" />
+                <node name="desc_param=" reader="FLOAT" />
+            </for>
+            <node name="slots" reader="CNTR" />
+            <for name="items" size="#slots">
+                <node name="item_id" reader="UINT" />
+                <node name="item_id2" reader="UINT" />
+                <node name="item_count" reader="UINT" />
+                <node name="enchant" reader="USHORT" />
+                <node name="slot" reader="UCHAR" />
+                <node name="bless" reader="UCHAR" />
+                <node name="bless_cond" reader="UINT" />
+            </for>
+            <node name="complete_item_type_count" reader="CNTR" />
+            <for name="complete_item_type" size="#complete_item_type_count">
+                <node name="item_id3" reader="UINT" />
+                <node name="item_count2" reader="UINT" />
+            </for>
+            <node name="complete_skill_type_count" reader="CNTR" />
+            <for name="complete_skill_type" size="#complete_skill_type_count">
+                <node name="skill_id" reader="UINT" />
+                <node name="skill_lvl" reader="UINT" />
+            </for>
+            <node name="unk_507" reader="UINT" />
+            <node name="start_time" reader="ASCF" />
+            <node name="end_time" reader="ASCF" />
+            <node name="seasonal" reader="UBYTE" />
+        </for>
+    </file>
+	<file pattern="SamuraiCrow" isSafePackage="true">
+		<node name="show_server" reader="UINT"/>
+		<for name="show_server" hidden="false">
+			<node name="show_collection_ID" reader="UINT"/>
+			<node name="show_server_ID" reader="UINT"/>
+		</for>
+		<for name="collection_count" size="1" hidden="false">
+			<for name="category_count" size="8">
+				<node name="col_cat_count" reader="UINT"/>
+			</for>
+			<for name="slot_count" size="8">
+				<node name="slot_cat_count" reader="UINT"/>
+			</for>
+		</for>
+		<node name="replace_collection_count" reader="UINT"/>
+		<for name="replace_collection_count" hidden="false">
+			<node name="server_id" reader="UINT"/>
+			<for name="replace_category_count" size="8">
+				<node name="repl_cat_count" reader="UINT"/>
+			</for>
+			<for name="replace_slot_count" size="8">
+				<node name="repl_slot_count" reader="UINT"/>
+			</for>
+		</for>
+		<node name="collection" reader="UINT"/>
+		<for name="collection" hidden="false">
+			<node name="collection_ID" reader="UINT"/>
+			<node name="collection_name" reader="ASCF"/>
+			<node name="main_category" reader="UINT"/>
+			<node name="period_in_seconds" reader="UINT"/>
+			<node name="option_id" reader="UINT"/>
+			<node name="collectionoption_filter" reader="CNTR"/>
+			<for name="collectionoption_filter">
+				<node name="filter_Name" reader="ASCF"/>
+				<node name="filter_diff" reader="UINT"/>
+				<node name="filter_Value" reader="FLOAT"/>
+			</for>
+			<node name="Slot_item" reader="CNTR"/>
+			<for name="Slot_item" hidden="true">
+				<node name="Slot_ItemID" reader="UINT"/>
+				<node name="Slot_itemID2" reader="UINT"/>
+				<node name="Slot_ItemCount" reader="UINT"/>
+				<node name="Slot_ItemEnchantCondition" reader="USHORT"/>
+				<node name="Slot_ItemSlotID" reader="UCHAR"/>
+				<node name="Slot_ItemRepresentative" reader="UINT"/>
+				<node name="Slot_ItemReplaceID" reader="UCHAR"/> 
+			</for>
+			<node name="RewardItems" reader="CNTR"/>
+			<for name="RewardItems">
+				<node name="RewardItemID" reader="UINT"/>
+				<node name="RewardItemCount" reader="UINT"/>
+			</for>
+			<node name="RewardSkills" reader="CNTR"/>
+			<for name="RewardSkills">
+				<node name="RewardSkillID" reader="UINT"/>
+				<node name="RewardSkillLevel" reader="UINT"/>
+			</for>
+			<node name="slot_count" reader="UINT"/>
+			<wrapper name="DateTime">
+				<node name="start" reader="ASCF"/>
+				<node name="end" reader="ASCF"/>
+			</wrapper>
+			<node name="DurationEvent" reader="UBYTE"/>
+		</for>
+	</file>
+</list>
