@@ -22,8 +22,7 @@ bin/
 .project
 .classpath
 
-# --- L2 Data & Temporários (Importante para o seu projeto) ---
-# Ignora dumps de memória e arquivos temporários de edição
+# --- Others logs ---
 *.log
 *.tmp
 *.bak
@@ -31,7 +30,7 @@ bin/
 *.dat.bak
 *.u.bak
 
-# --- Sistema Operacional ---
+# --- Operational System ---
 .DS_Store
 Thumbs.db
 desktop.ini
