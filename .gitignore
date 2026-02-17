@@ -1,0 +1,37 @@
+# --- IntelliJ IDEA ---
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+gen/
+cmake-build-*/
+
+# --- Java & Build Tools ---
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+target/
+build/
+bin/
+.gradle/
+.settings/
+.project
+.classpath
+
+# --- L2 Data & Temporários (Importante para o seu projeto) ---
+# Ignora dumps de memória e arquivos temporários de edição
+*.log
+*.tmp
+*.bak
+*.swp
+*.dat.bak
+*.u.bak
+
+# --- Sistema Operacional ---
+.DS_Store
+Thumbs.db
+desktop.ini
