@@ -53,16 +53,16 @@
 
 			<node name="base_effect" reader="CNTR" />
 			<for name="base_effect" size="#base_effect">
-				<node name="skillId" reader="UINT" />
-				<node name="skillLevel" reader="UINT" />
-				<node name="enchant_level" reader="UINT" />
+				<node name="base_skillId" reader="UINT" />
+				<node name="base_skillLevel" reader="UINT" />
+				<node name="base_enchant_level" reader="UINT" />
 			</for>
 
 			<node name="enchant_effect" reader="CNTR" />
 			<for name="enchant_effect" size="#enchant_effect">
-				<node name="skillId" reader="UINT" />
-				<node name="skillLevel" reader="UINT" />
-				<node name="enchant_level" reader="UINT" />
+				<node name="effect_skillId" reader="UINT" />
+				<node name="effect_skillLevel" reader="UINT" />
+				<node name="effect_enchant_level" reader="UINT" />
 			</for>
 
 			<node name="random_change_look" reader="CNTR" />
