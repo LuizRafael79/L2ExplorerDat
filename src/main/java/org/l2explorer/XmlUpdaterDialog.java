@@ -512,7 +512,7 @@ public class XmlUpdaterDialog extends JDialog
         while ((line = br.readLine()) != null) sb.append(line);
         br.close();
 
-        Pattern p = Pattern.compile("\"committer\"\\s*:\\s*\\{[^}]*\"date\"\\s*:\\s*\"([^\"]+)\"");
+        Pattern p = Pattern.compile("\"commit\"\\s*:\\s*\\{[^}]*\"committer\"\\s*:\\s*\\{[^}]*\"date\"\\s*:\\s*\"([^\"]+)\"");
         Matcher m = p.matcher(sb.toString());
         if (m.find())
             return Instant.from(DateTimeFormatter.ISO_DATE_TIME.parse(m.group(1)));
