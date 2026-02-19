@@ -255,32 +255,32 @@
         <node name="UNK_4" reader="UCHAR" />
         
         <wrapper name="slotone">
-            <node name="itemId" reader="UINT" />
-            <node name="itemEnchant" reader="UINT" />
+            <node name="slotone_itemId" reader="UINT" />
+            <node name="slotone_itemEnchant" reader="UINT" />
         </wrapper>
         <wrapper name="slottwo">
-            <node name="itemId" reader="UINT" />
-            <node name="itemEnchant" reader="UINT" />
+            <node name="slottwo_itemId" reader="UINT" />
+            <node name="slottwo_itemEnchant" reader="UINT" />
         </wrapper>
         
         <wrapper name="slotcatalyst">
-            <node name="itemId" reader="UINT" />
-            <node name="itemEnchant" reader="UINT" />
+            <node name="catalyst_itemId" reader="UINT" />
+            <node name="catalyst_itemEnchant" reader="UINT" />
         </wrapper>
 
         <node name="success_count" reader="UINT" /> 
         <for name="success_items" size="#success_count">
-            <node name="itemId" reader="UINT" />
-            <node name="itemEnchant" reader="UINT" />
-            <node name="itemCount" reader="UINT" />
-            <node name="chance" reader="UINT" />
+            <node name="success_itemId" reader="UINT" />
+            <node name="success_itemEnchant" reader="UINT" />
+            <node name="success_itemCount" reader="UINT" />
+            <node name="success_chance" reader="UINT" />
         </for>
 
         <node name="failure_count" reader="UINT" /> <for name="failure_items" size="#failure_count">
-            <node name="itemId" reader="UINT" />
-            <node name="itemEnchant" reader="UINT" />
-            <node name="itemCount" reader="UINT" />
-            <node name="chance" reader="UINT" />
+            <node name="failure_itemId" reader="UINT" />
+            <node name="failure_itemEnchant" reader="UINT" />
+            <node name="failure_itemCount" reader="UINT" />
+            <node name="failure_chance" reader="UINT" />
         </for>
 
         <node name="result_effecttype" reader="UBYTE" />

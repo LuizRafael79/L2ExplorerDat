@@ -354,6 +354,7 @@ public class AboutDialog extends JDialog
 		{
 			L2ExplorerDat.addLogConsole(i18n("about.social.updates.checking"), true);
 			UpdaterDialog.showUpdateDialog((JFrame) getOwner());
+			XmlUpdaterDialog.checkInBackground((L2ExplorerDat) getOwner());
 		});
 
 		buttonsPanel.add(Box.createHorizontalGlue());
