@@ -15,6 +15,8 @@
  */
 package org.l2explorer;
 
+import org.l2explorer.util.I18nManager;
+
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -43,7 +45,7 @@ import javax.swing.SwingWorker;
 
 public class UpdaterDialog extends JDialog
 {
-	private static final String CURRENT_VERSION = "2026.02.17";
+	private static final String CURRENT_VERSION = I18nManager.getInstance().getString("app.version");
 	private static final String REPO_OWNER = "LuizRafael79";
 	private static final String REPO_NAME = "L2ExplorerDat";
 
@@ -455,8 +457,7 @@ public class UpdaterDialog extends JDialog
 		}
 		br.close();
 
-		String jsonResponse = response.toString();
-		return jsonResponse;
+        return response.toString();
 	}
 
 	@SuppressWarnings("unused")

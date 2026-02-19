@@ -13,6 +13,8 @@
         <maven.compiler.release>25</maven.compiler.release>
         <main.class>org.l2explorer.L2ExplorerDat</main.class>
         <flatlaf.version>3.5.1</flatlaf.version>
+        <maven.build.timestamp.format>yyyy.MM.dd.HHmm</maven.build.timestamp.format>
+        <current.date>${maven.build.timestamp}</current.date>
     </properties>
 
     <dependencies>
@@ -28,6 +30,7 @@
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
+                <filtering>true</filtering>
                 <includes>
                     <include>**/*</include>
                 </includes>
@@ -107,10 +110,9 @@
 
                                 <chmod dir="${project.basedir}/build" perm="755" includes="*.sh"/>
 
-                                <zip destfile="${project.build.directory}/${project.artifactId}_Deploy.zip" basedir="${project.basedir}/build" />
+                                <zip destfile="${project.build.directory}/${project.artifactId}_${current.date}.zip" basedir="${project.basedir}/build" />
 
-                                <copy file="${project.build.directory}/${project.artifactId}_Deploy.zip" todir="${project.basedir}/build" />
-                                <echo message="✅ Missão Cumprida! Build Swing finalizado em: build/" />
+                                <copy file="${project.build.directory}/${project.artifactId}_${current.date}.zip" todir="${project.basedir}/build" />
                             </target>
                         </configuration>
                     </execution>

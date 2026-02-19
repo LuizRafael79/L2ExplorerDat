@@ -91,6 +91,10 @@ public class L2ExplorerDat extends JFrame
     private File _currentFileWindow = null;
     private ActionTask _progressTask = null;
 
+    private enum NotifyMode { APP_UPDATE, PARSERS_AVAILABLE }
+    private volatile NotifyMode _currentNotifyMode = null;
+    private int _pendingParserCount = 0;
+
     private boolean isDarkTheme;
 
     // Helper method para i18n
@@ -292,6 +296,8 @@ public class L2ExplorerDat extends JFrame
         initComponents();
         setupFrame();
         UpdaterDialog.checkInBackground(this);
+        XmlUpdaterDialog.checkInBackground(this);
+
     }
 
     public L2ExplorerDat()
@@ -403,15 +409,51 @@ public class L2ExplorerDat extends JFrame
     /**
      * Método chamado pelo UpdaterDialog quando uma nova versão é detectada.
      */
-    public void notifyUpdateAvailable() {
-        SwingUtilities.invokeLater(() -> {
-            if (_updateNotifyButton != null) {
-                _updateNotifyButton.setVisible(true);
-                _updateNotifyButton.getParent().revalidate(); // Força a sidebar a se reorganizar
-                _updateNotifyButton.getParent().repaint();
-            }
+    public void notifyUpdateAvailable()
+    {
+        SwingUtilities.invokeLater(() ->
+        {
+            _currentNotifyMode = NotifyMode.APP_UPDATE; // sempre sobrescreve
+            refreshNotifyButton();
             addLogConsole("✨ " + i18n("log.update.available.sidebar"), false);
         });
+    }
+
+    public void notifyParsersAvailable(int count)
+    {
+        SwingUtilities.invokeLater(() ->
+        {
+            // Se já tem app update pendente, ignora completamente —
+            // o app novo já vai vir com os parsers atualizados
+            if (_currentNotifyMode == NotifyMode.APP_UPDATE) return;
+
+            _currentNotifyMode = NotifyMode.PARSERS_AVAILABLE;
+            _pendingParserCount = count;
+            refreshNotifyButton();
+            addLogConsole("📦 " + count + " parser(s) available for update.", false);
+        });
+    }
+
+    private void refreshNotifyButton()
+    {
+        // Remove listeners anteriores para evitar duplicação
+        for (ActionListener al : _updateNotifyButton.getActionListeners())
+            _updateNotifyButton.removeActionListener(al);
+
+        if (_currentNotifyMode == NotifyMode.APP_UPDATE)
+        {
+            _updateNotifyButton.setText(i18n("update.notify.btn"));
+            _updateNotifyButton.addActionListener(e -> UpdaterDialog.showUpdateDialog(this));
+        }
+        else if (_currentNotifyMode == NotifyMode.PARSERS_AVAILABLE)
+        {
+            _updateNotifyButton.setText("Parsers Available (" + _pendingParserCount + ")");
+            _updateNotifyButton.addActionListener(e -> XmlUpdaterDialog.showDialog(this));
+        }
+
+        _updateNotifyButton.setVisible(_currentNotifyMode != null);
+        _updateNotifyButton.getParent().revalidate();
+        _updateNotifyButton.getParent().repaint();
     }
 
     private JButton createModernButton(String text, Color color)
